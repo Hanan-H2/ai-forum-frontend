@@ -1,0 +1,685 @@
+
+/* ========================================
+   AUTH PAGE — MAIN LAYOUT
+======================================== */
+
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   INFORMATION PANEL / MOBILE HEADER
+======================================== */
+
+.infoPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(
+    155deg,
+    var(--primary) 0%,
+    var(--primary-hover) 48%,
+    var(--primary-dark) 100%
+  );
+  color: var(--text-inverse);
+  box-sizing: border-box;
+}
+
+.infoContentWrapper {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.infoHeaderBlock {
+  margin-bottom: 0;
+}
+
+/* Hide the additional information on mobile */
+
+.infoDescriptionText,
+.featureList,
+.infoFooterSection {
+  display: none;
+}
+
+/* Brand */
+
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.brandWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.brandLogoBox {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+.brandLogoIcon {
+  color: var(--primary);
+}
+
+.brandTextGroup {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brandTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-inverse);
+  letter-spacing: -0.02em;
+}
+
+.brandTagline {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   DESKTOP INFORMATION CONTENT
+======================================== */
+
+.infoDescriptionText {
+  margin: 1.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Feature list */
+
+.featureList {
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.featureCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.featureIconBox {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.featureBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.featureHeading {
+  margin: 0 0 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-inverse);
+}
+
+.featureText {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+}
+
+/* Information panel footer */
+
+.infoFooterSection {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.infoFooterContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.avatarImage {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -0.5rem;
+  object-fit: cover;
+}
+
+.communityBadge {
+  max-width: 100%;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   FORM AREA
+======================================== */
+
+.formAreaSection {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  background-color: var(--background);
+  background-image: radial-gradient(
+    ellipse 120% 80% at 50% 0%,
+    rgba(255, 237, 213, 0.45) 0%,
+    transparent 55%
+  );
+}
+
+.formCardContainer {
+  width: 100%;
+  max-width: 33rem;
+  min-width: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* Form heading */
+
+.formHeadingBlock {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.formTitleText {
+  margin: 0 0 0.375rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.formSubtitleText {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========================================
+   INPUTS AND FORM ELEMENTS
+======================================== */
+
+.entryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+}
+
+.fieldLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.textInput {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.875rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.textInput:hover {
+  border-color: var(--border-hover);
+}
+
+.textInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.textInput::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+/* Password input */
+
+.passwordInputWrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.passwordField {
+  padding-right: 3rem;
+}
+
+.toggleEyeButton {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.toggleEyeButton:hover {
+  color: var(--primary);
+}
+
+.toggleEyeButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Remember email */
+
+.rememberOptionGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.rememberLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.rememberLabel input {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+
+/* ========================================
+   STATUS NOTIFICATIONS
+======================================== */
+
+.errorNotification,
+.successNotification {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  border-radius: var(--radius-md);
+}
+
+.errorNotification {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.successNotification {
+  color: #16a34a;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.submitActionContainer {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.primaryActionButton {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  background-color: var(--primary);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition:
+    background-color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.primaryActionButton:hover:not(:disabled) {
+  background-color: var(--primary-container, #ea580c);
+}
+
+.primaryActionButton:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, 0.35);
+  outline-offset: 3px;
+}
+
+.primaryActionButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.actionIcon {
+  flex-shrink: 0;
+}
+
+/* ========================================
+   FORM FOOTER / SWITCH MODE
+======================================== */
+
+.cardFooterBlock {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.footerPromptText {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.switchModeBtn {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--primary);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.switchModeBtn:hover {
+  text-decoration: underline;
+}
+
+.switchModeBtn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 600px) and (max-width: 967px) {
+  .infoPanel {
+    padding: 1.25rem 2rem;
+  }
+
+  .formAreaSection {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .formCardContainer {
+    max-width: 34rem;
+    padding: 2.5rem;
+  }
+
+  .formTitleText {
+    font-size: 1.75rem;
+  }
+}
+
+/* ========================================
+   DESKTOP — TWO-COLUMN LAYOUT
+======================================== */
+
+@media (min-width: 968px) {
+  .authContainer {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .infoPanel {
+    width: 45%;
+    min-width: 0;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .infoContentWrapper {
+    max-width: 32rem;
+  }
+
+  .infoHeaderBlock {
+    margin-bottom: 2rem;
+  }
+
+  .infoDescriptionText {
+    display: block;
+  }
+
+  .featureList {
+    display: flex;
+  }
+
+  .infoFooterSection {
+    display: block;
+  }
+
+  .formAreaSection {
+    width: 55%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 2.5rem;
+  }
+
+  .formCardContainer {
+    max-width: 33rem;
+    padding: 2.5rem;
+  }
+
+  .formTitleText {
+    font-size: 1.75rem;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .infoPanel {
+    padding: 0.875rem 1rem;
+  }
+
+  .brandWrapper {
+    gap: 0.75rem;
+  }
+
+  .brandLogoBox {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .brandTitle {
+    font-size: 1.125rem;
+  }
+
+  .brandTagline {
+    font-size: 0.8rem;
+  }
+
+  .formAreaSection {
+    align-items: flex-start;
+    padding: 1.5rem 0.875rem;
+  }
+
+  .formCardContainer {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .formHeadingBlock {
+    margin-bottom: 1.25rem;
+  }
+
+  .formTitleText {
+    font-size: 1.35rem;
+  }
+
+  .formSubtitleText {
+    font-size: 0.875rem;
+  }
+
+  .entryForm {
+    gap: 1rem;
+  }
+
+  .textInput {
+    padding: 0.8rem 0.875rem;
+    font-size: 1rem;
+  }
+
+  .passwordField {
+    padding-right: 2.75rem;
+  }
+
+  .cardFooterBlock {
+    margin-top: 1.5rem;
+  }
+}
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .infoPanel {
+    padding: 0.75rem;
+  }
+
+  .formAreaSection {
+    padding: 1.25rem 0.625rem;
+  }
+
+  .formCardContainer {
+    padding: 1rem;
+  }
+
+  .formTitleText {
+    font-size: 1.2rem;
+  }
+
+  .footerPromptText {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
